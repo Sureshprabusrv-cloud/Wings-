@@ -1,7 +1,10 @@
+cat > src/main/java/com/java/javaApp/EvenSum.java << 'EOF'
+package com.java.javaapp;
+
 public class EvenSum {
     public static void main(String[] args) {
         int num = 10; // pre-defined variable, checked at runtime
-        
+
         StringBuilder evens = new StringBuilder();
         int sum = 0;
 
@@ -15,3 +18,4 @@ public class EvenSum {
         System.out.println(sum);
     }
 }
+EOF
