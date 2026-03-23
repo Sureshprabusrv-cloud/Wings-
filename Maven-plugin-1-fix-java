@@ -1,0 +1,2 @@
+sed -i 's/package com.java.javaApp/package com.java.javaapp/g' src/main/java/com/java/javaapp/*.java
+sed -i 's/package com.java.javaApp/package com.java.javaapp/g' src/test/java/com/java/javaapp/*.java
