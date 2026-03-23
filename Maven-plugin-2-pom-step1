@@ -40,4 +40,11 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>3.1​​​​​​​​​​​​​​​​
+        <version>3.1.0</version>
+        <configuration>
+          <mainClass>javaApp.PrimeSum</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
