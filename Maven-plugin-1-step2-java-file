@@ -1,16 +1,17 @@
+package javaApp;
+
 public class PrimeSum {
 
     public static void main(String[] args) {
-        int maxNum = 10; // change as needed
-        System.out.println(sumOfPrimes(maxNum));
+        System.out.println(primesum(20));
     }
 
-    public static int sumOfPrimes(int maxNum) {
+    public static long primesum(int maxNum) {
         if (maxNum <= 0) {
             return 0;
         }
 
-        int sum = 0;
+        long sum = 0;
         for (int i = 2; i <= maxNum; i++) {
             if (isPrime(i)) {
                 sum += i;
