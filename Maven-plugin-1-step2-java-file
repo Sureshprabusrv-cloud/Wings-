@@ -1,21 +1,29 @@
-cat > src/main/java/com/java/javaApp/EvenSum.java << 'EOF'
-package com.java.javaapp;
+public class PrimeSum {
 
-public class EvenSum {
     public static void main(String[] args) {
-        int num = 10; // pre-defined variable, checked at runtime
+        int maxNum = 10; // change as needed
+        System.out.println(sumOfPrimes(maxNum));
+    }
 
-        StringBuilder evens = new StringBuilder();
-        int sum = 0;
-
-        for (int i = 2; i <= num; i += 2) {
-            if (i > 2) evens.append(",");
-            evens.append(i);
-            sum += i;
+    public static int sumOfPrimes(int maxNum) {
+        if (maxNum <= 0) {
+            return 0;
         }
 
-        System.out.println(evens.toString());
-        System.out.println(sum);
+        int sum = 0;
+        for (int i = 2; i <= maxNum; i++) {
+            if (isPrime(i)) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+
+    private static boolean isPrime(int n) {
+        if (n < 2) return false;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) return false;
+        }
+        return true;
     }
 }
-EOF
