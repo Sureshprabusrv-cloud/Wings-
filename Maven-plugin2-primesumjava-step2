@@ -1,3 +1,5 @@
+package javaApp;
+
 public class PrimeSum {
 
     public static boolean isPrime(int num) {
@@ -8,23 +10,16 @@ public class PrimeSum {
         return true;
     }
 
-    public static int sumOfPrimes(int maxNum) {
-        // Return 0 if maxNum is less than or equal to zero
+    public static long primesum(int maxNum) {
         if (maxNum <= 0) {
             return 0;
         }
-
-        int sum = 0;
+        long sum = 0;
         for (int i = 2; i <= maxNum; i++) {
             if (isPrime(i)) {
                 sum += i;
             }
         }
         return sum;
-    }
-
-    public static void main(String[] args) {
-        int maxNum = 10; // example value
-        System.out.println("Sum of primes up to " + maxNum + ": " + sumOfPrimes(maxNum));
     }
 }
