@@ -1,24 +1,20 @@
 public class EvenSum {
+    // DO NOT change or add 'int num = 10' if it's already defined here by the system
     public static void main(String[] args) {
-        // 'num' will be checked/provided at runtime
-        int num = 10; 
-        
         int sum = 0;
         StringBuilder sequence = new StringBuilder();
 
         for (int i = 2; i <= num; i += 2) {
             sum += i;
             sequence.append(i);
-            
-            // Add comma if it's not the last even number
             if (i + 2 <= num) {
                 sequence.append(",");
             }
         }
 
-        // Output the comma-separated string
-        System.out.println(sequence.toString());
-        // Output the calculated sum
-        System.out.println(sum);
+        if (sequence.length() > 0) {
+            System.out.println(sequence.toString());
+            System.out.println(sum);
+        }
     }
 }
