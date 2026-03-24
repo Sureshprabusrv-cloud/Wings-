@@ -1,25 +1,24 @@
-package javapp;
-
 public class EvenSum {
-
     public static void main(String[] args) {
-
-        int num = 10; // pre-defined variable checked at run-time
-
-        StringBuilder sb = new StringBuilder();
+        // 'num' will be checked/provided at runtime
+        int num = 10; 
+        
         int sum = 0;
+        StringBuilder sequence = new StringBuilder();
 
         for (int i = 2; i <= num; i += 2) {
-
-            if (sb.length() > 0) {
-                sb.append(",");
-            }
-
-            sb.append(i);
             sum += i;
+            sequence.append(i);
+            
+            // Add comma if it's not the last even number
+            if (i + 2 <= num) {
+                sequence.append(",");
+            }
         }
 
-        System.out.println(sb.toString());
+        // Output the comma-separated string
+        System.out.println(sequence.toString());
+        // Output the calculated sum
         System.out.println(sum);
     }
 }
