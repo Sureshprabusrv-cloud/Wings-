@@ -1,18 +1,13 @@
-public class EvenSum {
-    public static void main(String[] args) {
-        int num = 10; // pre-defined variable, runtime may change this
-        int sum = 0;
-
-        for (int i = 2; i <= num; i += 2) {
-            System.out.print(i);
-            sum += i;
-
-            if (i + 2 <= num) {
-                System.out.print(",");
-            }
-        }
-
-        System.out.println();
-        System.out.println(sum);
-    }
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
