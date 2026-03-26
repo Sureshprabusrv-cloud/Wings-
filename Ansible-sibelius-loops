@@ -1,0 +1,9 @@
+---
+- name: Install apache2, sqlite3, git using loop
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - apache2
+    - sqlite3
+    - git
