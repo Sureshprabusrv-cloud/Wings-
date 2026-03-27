@@ -1,13 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/target/classes" />
-    <output-test url="file://$MODULE_DIR$/target/test-classes" />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/target" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+package javaApp;
+
+public class EvenSum {
+
+    public static void main(String[] args) {
+        int num = Integer.parseInt(args[0]);
+        int even[] = new int[num];
+        int sum = 0, j = 0;
+        String evennums = "";
+
+        for (int i = 2; i <= num; i += 2) {
+            even[j] = i;
+            sum += i;
+            evennums += i;
+            if (i + 2 <= num) {
+                evennums += ",";
+            }
+            j++;
+        }
+
+        System.out.println(evennums);
+        System.out.println(sum);
+    }
+}
