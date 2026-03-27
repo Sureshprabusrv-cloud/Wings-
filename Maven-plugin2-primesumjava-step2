@@ -2,18 +2,11 @@ package javaApp;
 
 public class PrimeSum {
 
-    public static void main(String[] args) {
-        int maxNum = 10;
-
-        if (args.length > 0) {
-            maxNum = Integer.parseInt(args[0]);
-        }
-
+    public int primeSum(int maxNum) {
         int sum = 0;
 
         if (maxNum <= 0) {
-            System.out.println(0);
-            return;
+            return 0;
         }
 
         for (int i = 2; i <= maxNum; i++) {
@@ -31,6 +24,17 @@ public class PrimeSum {
             }
         }
 
-        System.out.println(sum);
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int maxNum = 10;
+
+        if (args.length > 0) {
+            maxNum = Integer.parseInt(args[0]);
+        }
+
+        PrimeSum obj = new PrimeSum();
+        System.out.println(obj.primeSum(maxNum));
     }
 }
