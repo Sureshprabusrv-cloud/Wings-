@@ -1,31 +1,44 @@
-package com.example;
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-public class PrimeSum {
+    <groupId>com.example</groupId>
+    <artifactId>prime-sum</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-    public static int sumOfPrimes(int maxNum) {
-        if (maxNum <= 0) {
-            return 0;
-        }
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-        int sum = 0;
-        for (int i = 2; i <= maxNum; i++) {
-            if (isPrime(i)) {
-                sum += i;
-            }
-        }
-        return sum;
-    }
+    <build>
+        <plugins>
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
 
-    private static boolean isPrime(int n) {
-        if (n < 2) return false;
-        for (int i = 2; i <= Math.sqrt(n); i++) {
-            if (n % i == 0) return false;
-        }
-        return true;
-    }
-
-    public static void main(String[] args) {
-        int maxNum = 10; // change as needed
-        System.out.println("Sum of primes up to " + maxNum + ": " + sumOfPrimes(maxNum));
-    }
-}
+            <!-- Maven Surefire Plugin - generates JUnit XML reports -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
