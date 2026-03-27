@@ -1,7 +1,11 @@
+import java.util.Scanner;
+
 public class EvenSum {
     public static void main(String[] args) {
-        // 'num' is likely pre-defined or provided. 
-        // If testing locally, you can use: int num = 10;
+        Scanner sc = new Scanner(System.in);
+        
+        // This reads the integer value (like 10) provided by the test case
+        int num = sc.nextInt(); 
         
         int sum = 0;
         StringBuilder output = new StringBuilder();
@@ -10,7 +14,6 @@ public class EvenSum {
             output.append(i);
             sum += i;
             
-            // Only add a comma if it's not the last even number
             if (i + 2 <= num) {
                 output.append(",");
             }
@@ -18,5 +21,7 @@ public class EvenSum {
 
         System.out.println(output.toString());
         System.out.println(sum);
+        
+        sc.close();
     }
 }
