@@ -9,7 +9,7 @@ public class PrimeSum {
             return 0;
         }
 
-        for (int i = 2; i < maxNum; i++) {
+        for (int i = 2; i < maxNum; i++) {   // strictly less than maxNum
             boolean isPrime = true;
 
             for (int j = 2; j < i; j++) {
