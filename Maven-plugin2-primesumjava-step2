@@ -9,10 +9,10 @@ public class PrimeSum {
             return 0;
         }
 
-        for (int i = 2; i <= maxNum; i++) {
+        for (int i = 2; i < maxNum; i++) {
             boolean isPrime = true;
 
-            for (int j = 2; j <= i / 2; j++) {
+            for (int j = 2; j < i; j++) {
                 if (i % j == 0) {
                     isPrime = false;
                     break;
@@ -28,7 +28,7 @@ public class PrimeSum {
     }
 
     public static void main(String[] args) {
-        int maxNum = 10;
+        int maxNum = 0;
 
         if (args.length > 0) {
             maxNum = Integer.parseInt(args[0]);
