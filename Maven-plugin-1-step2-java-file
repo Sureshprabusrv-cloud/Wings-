@@ -3,7 +3,12 @@ package javaApp;
 public class EvenSum {
 
     public static void main(String[] args) {
-        int num = Integer.parseInt(args[0]);
+        int num = 10;
+
+        if (args.length > 0) {
+            num = Integer.parseInt(args[0]);
+        }
+
         int even[] = new int[num];
         int sum = 0, j = 0;
         String evennums = "";
@@ -12,9 +17,11 @@ public class EvenSum {
             even[j] = i;
             sum += i;
             evennums += i;
+
             if (i + 2 <= num) {
                 evennums += ",";
             }
+
             j++;
         }
 
