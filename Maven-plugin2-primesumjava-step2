@@ -2,8 +2,8 @@ package javaApp;
 
 public class PrimeSum {
 
-    public int primeSum(int maxNum) {
-        int sum = 0;
+    public static long primesum(int maxNum) {
+        long sum = 0;
 
         if (maxNum <= 0) {
             return 0;
@@ -34,7 +34,6 @@ public class PrimeSum {
             maxNum = Integer.parseInt(args[0]);
         }
 
-        PrimeSum obj = new PrimeSum();
-        System.out.println(obj.primeSum(maxNum));
+        System.out.println(primesum(maxNum));
     }
 }
