@@ -1,22 +1,13 @@
-package javaApp;
-
-import java.util.Scanner;
+package com.example;
 
 public class PrimeSum {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int maxNum = sc.nextInt();
-        sc.close();
-        System.out.println(primesum(maxNum));
-    }
-
-    public static long primesum(int maxNum) {
+    public static int sumOfPrimes(int maxNum) {
         if (maxNum <= 0) {
             return 0;
         }
 
-        long sum = 0;
+        int sum = 0;
         for (int i = 2; i <= maxNum; i++) {
             if (isPrime(i)) {
                 sum += i;
@@ -31,5 +22,10 @@ public class PrimeSum {
             if (n % i == 0) return false;
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        int maxNum = 10; // change as needed
+        System.out.println("Sum of primes up to " + maxNum + ": " + sumOfPrimes(maxNum));
     }
 }
